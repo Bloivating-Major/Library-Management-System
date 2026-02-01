@@ -14,3 +14,5 @@
     - pathlib Path
     - datetime
 
+- now we will create first basic ui of options and actions that we have to perform
+- then we will create a class and connect it with out database which is in json format
