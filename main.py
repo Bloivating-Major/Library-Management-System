@@ -5,6 +5,21 @@ from pathlib import Path
 from datetime import datetime
 
 class Library:
+    database = "library.json"
+    data = {
+        "books": [],
+        "members": []
+    }
+    
+    #Load existing data from json file
+    if Path(database).exists():
+        with open(database, "r") as f:
+            content = f.read().strip()
+            if content:
+                data = json.loads(content)
+    else :
+        with open(database, "w") as f:
+            json.dump(data, f, indent=4)
     
     def gen_id(Prefix = "B"):
         random_id = ""
@@ -37,7 +52,7 @@ print("="*50)
 print("1. Add Book")
 print("2. List Books")
 print("3. Add Members")
-print("4. List members")
+print("4. List Members")
 print("5. Borrow Book")
 print("6. Return Book")
 print("0. Exit the portal")

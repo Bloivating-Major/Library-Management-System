@@ -33,5 +33,23 @@
         - added on => will use data and time over here
 
 - now to generate a random id we will create a function within class itself
-- so what we have to do is generate 2 types of ids book and member id keeping that in mind we will be writing our generate id function
+- so what we have to do is generate 2 types of ids 
+    - book id
+    - member id
+- keeping that in mind we will be writing our generate id function
 - create an object and call it use and test out the add book function
+
+- now what we will be doing is creating our database as json file 
+- Let's start by creating our database location
+- Format of our data will be in 2 parts
+    - books
+    - members
+- data = {
+    "books": [],
+    "members": []
+}
+
+- now we will create logic to load data from existing json file
+- if file is not present then create it
+- if file is present then load data from it
+- if file is empty then create it
