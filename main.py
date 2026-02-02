@@ -4,6 +4,21 @@ import string
 from pathlib import Path
 from datetime import datetime
 
+class Library:
+    def add_book(self):
+        title = input("Enter book title : ")
+        author = input("Enter the book author : ")
+        copies = int(input("How many copies : "))
+        
+        book = {
+            "id":"ui-1234",
+            "title": title,
+            "author": author,
+            "total_copies":copies,
+            "available_copies":copies,
+            "added_on":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+
 print("="*50)
 print("Library Management System")
 print("="*50)
