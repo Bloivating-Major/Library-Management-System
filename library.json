@@ -1,0 +1,21 @@
+{
+    "books": [
+        {
+            "id": "B-CFR0W",
+            "title": "Stranger Things",
+            "author": "Duffer Brothers",
+            "total_copies": 30,
+            "available_copies": 30,
+            "added_on": "2026-04-18 16:10:06"
+        },
+        {
+            "id": "B-S3BLO",
+            "title": "Money Heist",
+            "author": "Professor",
+            "total_copies": 30,
+            "available_copies": 30,
+            "added_on": "2026-04-18 16:13:29"
+        }
+    ],
+    "members": []
+}

@@ -10,7 +10,7 @@ class Library:
         "books": [],
         "members": []
     }
-    
+
     #Load existing data from json file
     if Path(database).exists():
         with open(database, "r") as f:
@@ -27,6 +27,12 @@ class Library:
             random_id += random.choice(string.ascii_uppercase+string.digits)
         random_id = Prefix + "-" + random_id
         return random_id
+
+    # Save Data Function
+    @classmethod
+    def save_data(cls):
+        with open(cls.database, "w") as f:
+            json.dump(cls.data, f, indent=4, default=str)
     
     def add_book(self):
         title = input("Enter book title : ")
@@ -42,7 +48,8 @@ class Library:
             "added_on":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
         
-        print(book)
+        Library.data["books"].append(book)
+        Library.save_data()
         
 admin = Library()
 

@@ -53,3 +53,12 @@
 - if file is not present then create it
 - if file is present then load data from it
 - if file is empty then create it
+
+- now what i will do is in add book function i will add the book in our json db
+- after that we have to save our data in json db
+- so we will create a function save_data() and then call it in add_book() function
+- save data function will be class based and only accessible within the class
+    - we will use @classmethod decorator over here
+    - we will use indent=4 to make our json file readable
+    - we will use default=str to handle any kind of data type
+    - and use json.dump() to write data in json file
