@@ -31,3 +31,7 @@
         - total copies
         - available copies
         - added on => will use data and time over here
+
+- now to generate a random id we will create a function within class itself
+- so what we have to do is generate 2 types of ids book and member id keeping that in mind we will be writing our generate id function
+- create an object and call it use and test out the add book function

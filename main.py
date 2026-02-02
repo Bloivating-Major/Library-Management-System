@@ -5,19 +5,31 @@ from pathlib import Path
 from datetime import datetime
 
 class Library:
+    
+    def gen_id(Prefix = "B"):
+        random_id = ""
+        for i in range(5):
+            random_id += random.choice(string.ascii_uppercase+string.digits)
+        random_id = Prefix + "-" + random_id
+        return random_id
+    
     def add_book(self):
         title = input("Enter book title : ")
         author = input("Enter the book author : ")
         copies = int(input("How many copies : "))
         
         book = {
-            "id":"ui-1234",
+            "id": Library.gen_id(),
             "title": title,
             "author": author,
             "total_copies":copies,
             "available_copies":copies,
             "added_on":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
+        
+        print(book)
+        
+admin = Library()
 
 print("="*50)
 print("Library Management System")
@@ -30,3 +42,8 @@ print("5. Borrow Book")
 print("6. Return Book")
 print("0. Exit the portal")
 print("-"*50)
+
+choice = input("What task you want to do? : ")
+
+if choice == "1":
+    admin.add_book()
