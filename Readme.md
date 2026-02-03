@@ -62,3 +62,9 @@
     - we will use indent=4 to make our json file readable
     - we will use default=str to handle any kind of data type
     - and use json.dump() to write data in json file
+
+- now we will create list books function
+- it will list all the books in our json db
+- we will use f-strings to format our output
+- we will use slicing to truncate the title and author if they are too long
+- we will use :12, :25, :15, :5, :>3 to format our output

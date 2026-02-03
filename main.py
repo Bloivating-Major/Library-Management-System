@@ -50,6 +50,15 @@ class Library:
         
         Library.data["books"].append(book)
         Library.save_data()
+        print("Book added successfully")
+
+    def list_books(self):
+        if not Library.data["books"]:
+            print("No books found")
+            return
+        
+        for book in Library.data["books"]:
+            print(f" {book['id']:12} | {book['title'][:24]:25} | {book['author'][:15]:25} | {book['total_copies']:5} / {book['available_copies']:>3}")
         
 admin = Library()
 
@@ -69,3 +78,5 @@ choice = input("What task you want to do? : ")
 
 if choice == "1":
     admin.add_book()
+elif choice == "2":
+    admin.list_books()
